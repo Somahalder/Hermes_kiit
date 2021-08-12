@@ -1,0 +1,115 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>HERMES_KIIT</title>
+</head>
+<body>
+    <div class="header">
+         <nav class="navbar">
+             <div class="logo">HERMES <span class="KIIT"> KIIT</span></div>
+             <ul class="main-nav" responsive id="navbar-toggle">
+                <li><a class="nav-link" href="index.html"> HOME </a></li>
+                <li><a class="nav-link"href="Our-Team.html"> OUR TEAM</a></li>
+                <li><a class="nav-link"href=" achievements.html"> ACHIEVEMENTS </a></li>
+                <li><a class="nav-link"href="contact-us.html"> CONTACT-US </a></li>
+                <li><a class="nav-link"href="PhotoGallery.html"> PHOTO GALLERY </a></li>
+                <li><a class="nav-link"href="Blog-content.html"> BLOG </a></li>
+                <li class="dropdown-icon"><a onclick= "toggleDropdown()" href="#">&#9776;</a></li>
+              </ul>
+          </nav>
+         <div class="main-content-header">
+            <h2>PhotoGallery</h2>
+         </div>
+         </div>
+         
+         
+
+
+
+ <body onload="slider()">
+    
+    <section class="Photo-Gallery">
+        <h2></h2>
+
+        <div class="banner">
+            <br>
+            <p>Our memorable moments which  enriched students and their quest of learning</p>
+            <br>
+            
+
+          <div class="slider">
+            <img src="images/slide-1.jpeg" height="600px" width="1000px"  id= "slideImg">
+          </div>
+        </div>
+
+     </section>
+
+     <section class="footer">
+        <h4>Hermes-Team</h4>
+        <p>Mechanical lab , KIIT-Bhuveneshwar</p>
+            <p> info@Hermes_kiit.in</p>
+        
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-youtube"></i>
+       </div>
+     </section>
+
+   <!---------------------image slider java script---------------->
+
+     <script>
+
+      var slideImage = document.getElementById("slideImg");
+
+      var images =new Array(
+          "images/slide-1.jpeg",
+          "images/slide-2.jpeg",
+          "images/slide-3.jpeg",
+          "images/slide-4.jpeg",
+          "images/slide-5.jpeg",
+          "images/slide-6.jpeg",
+      );
+
+    var len =images.length;
+    var i = 0
+
+    function slider(){
+        if(i>len-1){
+            i= 0
+        }
+        slideImg.src = images[i];
+        i++;
+        setTimeout('slider()' ,4000)
+    }
+
+   </script>
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+   <!-----------------jS for toggle menu----------- -->
+   
+
+ <script>
+
+ function toggleDropdown() {
+    let navbarToggle = document.getElementById("navbar-toggle");
+    if(navbarToggle.className ===  'main-nav') {
+        navbarToggle.className += ' responsive';
+
+    } else {
+        navbarToggle.className = 'main-nav';
+    }
+}
+
+</script>
+
+</body>
+</html>

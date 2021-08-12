@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>HERMES_KIIT</title>
+</head>
+<body>
+    <div class="header">
+         <nav class="navbar">
+             <div class="logo">HERMES <span class="KIIT"> KIIT</span></div>
+             <ul class="main-nav" responsive id="navbar-toggle">
+                <li><a class="nav-link" href="index.html"> HOME </a></li>
+                <li><a class="nav-link"href="Our-Team.html"> OUR-TEAM</a></li>
+                <li><a class="nav-link"href=" achievements.html"> ACHIEVEMENTS </a></li>
+                <li><a class="nav-link"href="PhotoGallery.html"> PHOTO GALLERY </a></li>
+                <li><a class="nav-link"href="Blog-content.html">BLOG </a></li>
+                <li><a class="nav-link"href="contact-us.html"> CONTACT-US </a></li>
+                <li class="dropdown-icon"><a onclick= "toggleDropdown()" href="#">&#9776;</a></li>
+              </ul>
+          </nav>
+         <div class="main-content-header">
+            <h2>OUR ACHIEVEMENTS</h2>
+         </div>
+  </div>
+  <br>
+
+  <section class="achievements">
+      <div class="container-a">
+
+          <div class="indicator">
+              <span class="btnn active"></span>
+              <span class="btnn"></span>
+              <span class="btnn"></span>
+              <span class="btnn"></span>
+              <span class="btnn"></span>
+              <span class="btnn"></span>
+          </div>
+
+          <div class="model">
+
+           <div class="slide-row" id="slide">
+             <div class="slide-col">
+              <div class="user-text">
+                <h3>xyz</h3>
+                <p>Lorem ipsum may be used as a placeholder before 
+                    final copy is available. It is also used to temporarily 
+                    replace text in a process called greeking, which allows 
+                    designers to consider the form of a webpage or publication,
+                    without the meaning of the text influencing the design. </p>
+
+            </div>
+             <div class="user-img">
+                <img src="images/images10.jpg" height="150px" width="430px">
+              </div>
+          </div>
+
+        <div class="slide-col">
+         <div class="user-text">
+            <h3>xyz</h3>
+            <p>Lorem ipsum may be used as a placeholder before 
+                final copy is available. It is also used to temporarily 
+                replace text in a process called greeking, which allows 
+                designers to consider the form of a webpage or publication, 
+                without the meaning of the text influencing the design. </p>
+
+        </div>
+         <div class="user-img">
+            <img src="images/images10.jpg" height="150px" width="430px">
+          </div>
+        </div>
+
+       <div class="slide-col">
+       <div class="user-text">
+        <h3>xyz</h3>
+        <p>Lorem ipsum may be used as a placeholder before 
+            final copy is available. It is also used to temporarily 
+            replace text in a process called greeking, which allows 
+            designers to consider the form of a webpage or publication, 
+            without the meaning of the text influencing the design. </p>
+
+      </div>
+      <div class="user-img">
+        <img src="images/images10.jpg" height="150px" width="430px">
+      </div>
+      </div>
+
+     <div class="slide-col">
+      <div class="user-text">
+        <h3>xyz</h3>
+        <p>Lorem ipsum may be used as a placeholder before 
+            final copy is available. It is also used to temporarily 
+            replace text in a process called greeking, which allows 
+            designers to consider the form of a webpage or publication, 
+            without the meaning of the text influencing the design. </p>
+
+      </div>
+      <div class="user-img">
+        <img src="images/images10.jpg" height="150px" width="430px">
+      </div>
+      </div>
+
+      <div class="slide-col">
+      <div class="user-text">
+        <h3>xyz</h3>
+        <p>Lorem ipsum may be used as a placeholder before 
+            final copy is available. It is also used to temporarily 
+            replace text in a process called greeking, which allows 
+            designers to consider the form of a webpage or publication, 
+            without the meaning of the text influencing the design. </p>
+
+      </div>
+      <div class="user-img">
+        <img src="images/images10.jpg" height="150px" width="430px">
+
+       </div>
+     </div>
+
+     <div class="slide-col">
+      <div class="user-text">
+        <h3>xyz</h3>
+        <p>Lorem ipsum may be used as a placeholder before 
+            final copy is available. It is also used to temporarily
+            replace text in a process called greeking, which allows 
+            designers to consider the form of a webpage or publication, 
+            without the meaning of the text influencing the design. </p>
+
+      </div>
+       <div class="user-img">
+        <img src="images/images10.jpg" height="150px" width="430px">
+        </div>
+     </div>
+
+ </div>
+ </div>
+
+</div>
+</section>
+
+<section class="footer">
+  <h4>Hermes-Team</h4>
+  <p>Mechanical lab , KIIT-Bhuveneshwar</p>
+      <p> info@Hermes_kiit.in</p>
+  
+  <div class="icons">
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-youtube"></i>
+ </div>
+</section>
+
+<!---------------------Slider Javascript--------------------->
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script type= "text/javascript" >
+
+var btnn = document.getElementsByClassName('btnn');
+var slide = document.getElementById('slide');
+
+btnn[0].onclick = function(){
+    slide.style.transform = "translateX(0px)";
+    for(i=0;i<6;i++){
+    btnn[i].classList.remove('active');
+  }
+  this.classList.add('active');
+}
+btnn[1].onclick = function(){
+    slide.style.transform = "translateX(-800px)";
+    for(i=0;i<6;i++){
+    btnn[i].classList.remove('active');
+  }
+  this.classList.add('active');
+
+}
+btnn[2].onclick = function(){
+    slide.style.transform = "translateX(-1600px)";
+
+    for(i=0;i<6;i++){
+    btnn[i].classList.remove('active');
+  }
+  this.classList.add('active');
+}
+btnn[3].onclick = function(){
+    slide.style.transform = "translateX(-2400px)";
+
+    for(i=0;i<6;i++){
+    btnn[i].classList.remove('active');
+  }
+  this.classList.add('active');
+
+}
+btnn[4].onclick = function(){
+    slide.style.transform = "translateX(-3200px)";
+
+    for(i=0;i<6;i++){
+    btnn[i].classList.remove('active');
+  }
+  this.classList.add('active');
+
+}
+btnn[5].onclick = function(){
+    slide.style.transform = "translateX(-4000px)";
+
+    for(i=0;i<6;i++){
+    btnn[i].classList.remove('active');
+  }
+  this.classList.add('active');
+
+}
+
+</script>
+
+
+<!-----------------js for toggle menu--------->
+<script>
+function toggleDropdown() {
+    let navbarToggle = document.getElementById("navbar-toggle");
+    if(navbarToggle.className ===  'main-nav') {
+        navbarToggle.className += ' responsive';
+
+    } else {
+        navbarToggle.className = 'main-nav';
+    }
+}
+
+</script>
+
+
+
+ </body>
+ </html>         

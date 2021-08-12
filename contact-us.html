@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>HERMES_KIIT</title>
+</head>
+<body>
+    <div class="header">
+         <nav class="navbar">
+             <div class="logo">HERMES <span class="KIIT"> KIIT</span></div>
+             <ul class="main-nav" responsive id="navbar-toggle">
+                <li><a class="nav-link" href="index.html"> HOME </a></li>
+                <li><a class="nav-link"href="Our-Team.html"> OUR TEAM</a></li>
+                <li><a class="nav-link"href="achievements.html"> ACHIEVEMENTS </a></li>
+                <li><a class="nav-link"href="PhotoGallery.html"> PHOTO GALLERY </a></li>
+                <li><a class="nav-link"href="Blog-content.html"> BLOG </a></li>
+                <li><a class="nav-link"href="contact-us.html"> CONTACT-US </a></li>
+                <li class="dropdown-icon"><a onclick= "toggleDropdown()" href="#">&#9776;</a></li>
+              </ul>
+          </nav>
+      <div class="main-content-header"> 
+          <h2>Contact -Us</h2>
+          
+       </div>
+    </div>
+
+    <section class="location">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.
+        6814402135474!2d85.81310341466816!3d20.354774715820547!2m3!1f0!2f0!3f0!3m2!
+        1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19091813dab8d5%3A0xa033051ccddbbcbc!
+        2sKalinga%20Institute%20of%20Industrial%20Technology!5e0!3m2!1sen!2sin!
+        4v1628781558538!5m2!1sen!2sin" width="600" height="450" style="border:0;"
+         allowfullscreen="" loading="lazy"></iframe>
+
+    </section>
+       
+     <section class="contact-us">
+
+       <div class="row">
+         <div class="contact-col">
+             <div class="msg">
+                   <i class="fa fa-home"></i>
+                   <span>
+                       <h5>XYZ  Road, ABC Building</h5>
+                       <p>kolkata,INDIA</p>
+                   </span>
+             </div>
+   
+             <div class="msg">
+                 <i class="fa fa-phone"></i>
+                 <span>
+                     <h5>+91 1234567890</h5>
+                     <p>Monday to Saturday,10AM to 6PM</p>
+                 </span>
+               </div>
+   
+             <div class="msg">
+                 <i class="fa fa-envelope"></i>
+                 <span>
+                     <h5>info@Hermes_kiit.com</h5>
+                     <p>email your queries</p>
+                 </span>
+             </div>
+          </div>
+
+          <div class="contact-col">
+
+               <form action="#" method="POST">
+        
+                  <input type="text" id="name" name="name" placeholder="name">
+                      <p id="nameerror"> </p><br>
+                  
+                  <input type="email" id="email" name="email" placeholder="email">
+                      <p id="emailerror"></p><br>
+                
+                  <input type="text" id="subject" name="subject" placeholder="subject">
+                       <p id="subjecterror"></p><br>
+                  
+                  <input type="text" id="message" name="message" placeholder="message">
+                       <p id="messageerror"></p><br>
+                  
+                  <button type="submit" class="btn" onclick="validate(event);">submit</button>
+                  
+                 </form>
+          </div>
+       </div>
+       </section>
+           <br>
+           
+       <section class="footer">
+        <h4>Hermes-Team</h4>
+        <p>Mechanical lab , KIIT-Bhuveneshwar</p>
+            <p> info@Hermes_kiit.in</p>
+        
+         <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-youtube"></i>
+       </div>
+      </section>
+   
+                 
+    <!----------------------javascript for form validation using Reg Ex------>
+           
+        
+               <script type="text/javascript">
+        
+                function validate(){
+                    var name= document.getElementById("name").value;
+                    var email= document.getElementById("email").value;
+                    var subject= document.getElementById("subject").value;
+                    var message= document.getElementById("message").value;
+                
+           
+           
+           
+                  var patternname= /^[A-Z]{1}[a-z]{1,}$/;
+                  if(name==" " || name==null || patternname.test(name)== false)
+                   {
+                       document.getElementById("nameerror").innerHTML="Please Enter Name";
+                       event.preventDefault();
+                   } 
+                   
+                     else
+                     {
+                       document.getElementById("nameerror").innerHTML=" ";
+                   }
+                 
+                  var patternemail= /^[a-zA-Z0-9_.]{1,}@[a-z]{3,}[.]{1}[a-z]{2,6}$/;
+                  if(email==" " || email==null || patternemail.test(email)== false)
+                   {
+                       document.getElementById("emailerror").innerHTML="Please Enter valid email";
+                       event.preventDefault();
+                   } 
+                   
+                     else
+                     {
+                       document.getElementById("emailerror").innerHTML=" ";
+                   }
+                 
+                 
+                   var patternsubject= /^[A-Za-z0-9.]{5,50}$/;
+                   if(subject==" " || subject==null || patternsubject.test(subject)== false)
+                   {
+                       document.getElementById("subjecterror").innerHTML="Please Enter subject";
+                       event.preventDefault();
+                   } 
+                   
+                     else
+                     {
+                       document.getElementById("subjecterror").innerHTML=" ";
+                   }
+                 
+                 
+                   var patternmessage= /^[A-Za-z0-9.]{5,50}$/;
+                   if(message==" " || message==null || patternmessage.test(message)== false)
+                   {
+                       document.getElementById("messageerror").innerHTML="Please Enter valid text";
+                       event.preventDefault();
+                   } 
+                   
+                     else
+                     {
+                       document.getElementById("messageerror").innerHTML=" ";
+                   }
+                 
+                 
+                 }
+        
+                </script>
+
+      <!-------------------------------------js for toggle menu---------------->
+
+      <script>
+      function toggleDropdown() {
+        let navbarToggle = document.getElementById("navbar-toggle");
+        if(navbarToggle.className ===  'main-nav') {
+            navbarToggle.className += ' responsive';
+    
+        } else {
+            navbarToggle.className = 'main-nav';
+        }
+    }
+    
+      </script>
+        
+                
+
+
+          
